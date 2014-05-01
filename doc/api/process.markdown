@@ -717,3 +717,32 @@ a diff reading, useful for benchmarks and measuring intervals:
     }, 1000);
 
 [EventEmitter]: events.html#events_class_events_eventemitter
+
+
+## process.moduleLoadList
+
+Array of strings identifying every loaded `Binding` and `NativeModule`.
+
+    console.log(process.moduleLoadList);
+
+An example of the possible output looks like:
+
+[ 'Binding evals',
+  'Binding natives',
+  'NativeModule events',
+  'NativeModule buffer',
+  'Binding buffer',
+  'NativeModule assert',
+  'NativeModule util',
+  'NativeModule module',
+  'NativeModule path',
+  'NativeModule tty',
+  'NativeModule net',
+  'NativeModule stream',
+  'NativeModule _stream_readable',
+  'NativeModule _stream_writable',
+  'NativeModule _stream_duplex',
+  'NativeModule _stream_transform',
+  'NativeModule _stream_passthrough' ]
+
+Note: User-land modules are not included in this list.
